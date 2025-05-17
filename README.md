@@ -85,4 +85,4 @@ DOI={https://doi.org/10.1016/j.scs.2025.106439}
 ```
 
 # Acknowledge
-Thanks to the code base from [Lseg](https://github.com/isl-org/lang-seg)
+Thanks to the code base from [Lseg](https://github.com/isl-org/lang-seg), [PyTorch-Encoding](https://github.com/zhanghang1989/PyTorch-Encoding), [CLIP](https://github.com/openai/CLIP), [RemoteCLIP](https://github.com/ChenDelong1999/RemoteCLIP)
