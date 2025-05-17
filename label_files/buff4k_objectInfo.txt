@@ -1,0 +1,13 @@
+Idx,Name
+01, dense residential
+02, business
+03, commercial
+04, residential
+05, factory
+06, government
+07, hospital
+08, resort
+09, public
+10, school
+11, background
+12, others
