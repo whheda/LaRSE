@@ -1,5 +1,7 @@
 # 📦 Visual-language reasoning segmentation of function-level building footprint (LaRSE)
 
+This the open source code for the paper "Visual-language reasoning segmentation (LARSE) of function-level building footprint across Yangtze River Economic Belt of China", https://doi.org/10.1016/j.scs.2025.106439.
+
 Function-level building footprint is vital for understanding socio-economic heterogeneity and advancing sustainable development. However, typical researches are restricted to either parcel-level urban function identification or binary building footprint extraction, neither of which can delineate human activity spaces at the footprint unit. Besides, common segmentation networks lack human-like reasoning capabilities, as they fail to incorporate surrounding entities or leverage geo-spatial knowledge. 
 
 To this being, this study proposes a function-level building footprint extraction based on visual-language reasoning segmentation framework (LaRSE). It simplifies the task into two stages, i.e., visual model for segmenting building footprint and deriving context embeddings, followed by a language model that utilizes these embeddings to perform precise semantic reasoning for each footprint. In this framework, the visual model acts as the "eye" by perceiving input, while the language model functions as the "brain", interpreting these inputs logically.
