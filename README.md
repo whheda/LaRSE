@@ -25,8 +25,8 @@ pip install tensorboardX
 pip install matplotlib
 pip install test-tube
 pip install wandb
-specific process can be find in https://github.com/isl-org/lang-seg
 ```
+specific process can be find in https://github.com/isl-org/lang-seg
 
 ## 🚀 Dataset Preparation
 
@@ -38,7 +38,36 @@ In this study, we developed a solid benchmark dataset for deep learning-based bu
 
 ### 2. BUFF dataset loading
 
-You need to define the dataset class before loading the dataset. For example, the BUFF dataset is defined as the "buff1w" class in ./data/__init__.py. At the same time, place the buff1w.py file (located in the project root directory) into the encoding library within the user-created environment, typically under the path ./lib/python3.7/site-packages/encoding/datasets/. Also, add the following line to the __init__.py file in that directory.
+The user need to define the dataset class before loading the dataset. For example, the BUFF dataset is defined as the "buff1w" class in ```./data/__init__.py```. At the same time, place the ```buff1w.py``` file into the ```encoding``` library within the user-created venv, typically under the path ```./lib/python3.7/site-packages/encoding/datasets/```. Also, add the following line to the ```__init__.py``` file in that directory.
+
+```bash
+from .buff1w import BuFF1WChallengeDataset
+datasets = {
+    'coco': COCOSegmentation,
+    'ade20k': ADE20KSegmentation,
+    'pascal_voc': VOCSegmentation,
+    'pascal_aug': VOCAugSegmentation,
+    'pcontext': ContextSegmentation,
+    'citys': CitySegmentation,
+    'imagenet': ImageNetDataset,
+    'minc': MINCDataset,
+    'cifar10': CIFAR10,
+    'buff6k': BuFF6KChallengeDataset,
+    'buff4k': BuFF4KChallengeDataset,
+    'buff1w': BuFF1WChallengeDataset,
+}
+```
+## 🚀 Pretrained model preparation
+
+Loading pre-trained visual-language model RemoteCLIP. The path is ```./modules/models/lseg_vit.py```, and the default model used is ```RemoteCLIP-ViT-B-32.pt```, which can be replaced as needed. The download link for ```RemoteCLIP-ViT-B-32.pt``` can be found at: https://github.com/ChenDelong1999/RemoteCLIP. The download link for ```checkpoint_LARSE.ckpt``` model can be found at https://pan.baidu.com/s/1qCUb-4E7uyu0fo0M5GPjGQ?pwd=2su3, code: 2su3 
+
+## 🚀 Test demo
+
+Define the root path of the dataset and the path of the pre-trained weight ```checkpoint_LARSE.ckpt``` in ```test.sh```, and define the output path in ```test.py```. Then you can easily run the demo:
+
+```bash
+bash test.sh
+```
 
 # Acknowledge
-Thanks to the code base from Lseg
+Thanks to the code base from [Lseg]([https://github.com/user-attachments/assets/5f8987ed-a311-43fd-84e5-1aead39b7e1b](https://github.com/isl-org/lang-seg))
