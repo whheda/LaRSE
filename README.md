@@ -57,9 +57,11 @@ datasets = {
     'buff1w': BuFF1WChallengeDataset,
 }
 ```
+
 ## 🚀 Pretrained model preparation
 
 Loading pre-trained visual-language model RemoteCLIP. The path is ```./modules/models/lseg_vit.py```, and the default model used is ```RemoteCLIP-ViT-B-32.pt```, which can be replaced as needed. The download link for ```RemoteCLIP-ViT-B-32.pt``` can be found at: https://github.com/ChenDelong1999/RemoteCLIP. The download link for ```checkpoint_LARSE.ckpt``` model can be found at https://pan.baidu.com/s/1qCUb-4E7uyu0fo0M5GPjGQ?pwd=2su3, code: 2su3 
+
 
 ## 🚀 Test demo
 
@@ -69,5 +71,18 @@ Define the root path of the dataset and the path of the pre-trained weight ```ch
 bash test.sh
 ```
 
+If you find this repo useful, please cite:
+
+```bash
+author={Da He, Xiaoping Liu, Qian Shi, Yue Zheng}
+title={Visual-language reasoning segmentation (LARSE) of function-level building footprint across Yangtze River Economic Belt of China},
+journaltitle={Sustainable Cities and Society},
+volume={127},
+issue={106439},
+year={2025},
+ISSN={2210-6707},
+DOI={https://doi.org/10.1016/j.scs.2025.106439}
+```
+
 # Acknowledge
-Thanks to the code base from [Lseg]([https://github.com/user-attachments/assets/5f8987ed-a311-43fd-84e5-1aead39b7e1b](https://github.com/isl-org/lang-seg))
+Thanks to the code base from [Lseg](https://github.com/isl-org/lang-seg)
